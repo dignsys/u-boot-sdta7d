@@ -1,0 +1,15 @@
+if TARGET_SDTA7D
+
+config SYS_BOARD
+	default "sdta7d"
+
+config SYS_VENDOR
+	default "dignsys"
+
+config SYS_SOC
+	default "mx7"
+
+config SYS_CONFIG_NAME
+	default "sdta7d"
+
+endif

@@ -20,6 +20,15 @@ choice
 	prompt "MX7 board select"
 	optional
 
+config TARGET_SDTA7D
+	bool "sdta7d"
+	select BOARD_LATE_INIT
+	select DM
+	select DM_THERMAL
+	select MX7D
+	select SUPPORT_SPL
+	imply CMD_DM
+
 config TARGET_CL_SOM_IMX7
 	bool "CL-SOM-iMX7"
 	select DM
@@ -70,5 +79,6 @@ source "board/freescale/mx7dsabresd/Kconfig"
 source "board/technexion/pico-imx7d/Kconfig"
 source "board/toradex/colibri_imx7/Kconfig"
 source "board/warp7/Kconfig"
+source "board/dignsys/sdta7d/Kconfig"
 
 endif
