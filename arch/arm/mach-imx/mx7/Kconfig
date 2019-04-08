@@ -79,6 +79,6 @@ source "board/freescale/mx7dsabresd/Kconfig"
 source "board/technexion/pico-imx7d/Kconfig"
 source "board/toradex/colibri_imx7/Kconfig"
 source "board/warp7/Kconfig"
-source "board/dignsys/sdta7d/Kconfig"
+source "board/freescale/sdta7d/Kconfig"
 
 endif
