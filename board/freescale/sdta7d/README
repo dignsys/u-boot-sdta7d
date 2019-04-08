@@ -8,7 +8,7 @@ Required software on the host PC:
 Build U-Boot for sdta7d:
 
 $ make mrproper
-$ make pico-imx7d_defconfig
+$ make sdta7d_defconfig
 $ make
 
 This generates the SPL and u-boot.img binaries.
