@@ -19,7 +19,7 @@ int spl_start_uboot(void)
 #endif
 
 static struct ddrc ddrc_regs_val = {
-	.mstr		= 0x01040001,
+	.mstr		= 0x01041001,
 	.rfshtmg	= 0x00400046,
 	.init1		= 0x00690000,
 	.init0		= 0x00020083,
@@ -46,10 +46,11 @@ static struct ddrc ddrc_regs_val = {
 	.rfshtmg	= 0x00400046,
 	.dramtmg0	= 0x09081109,
 	.addrmap0	= 0x0000001f,
-	.addrmap1	= 0x00080808,
+	.addrmap1	= 0x00070707,
+	.addrmap3	= 0x0F000000,
 	.addrmap4	= 0x00000f0f,
-	.addrmap5	= 0x07070707,
-	.addrmap6	= 0x0f0f0707,
+	.addrmap5	= 0x06060606,
+	.addrmap6	= 0x0f060606,
 };
 
 static struct ddrc_mp ddrc_mp_val = {
@@ -95,7 +96,7 @@ static bool is_1g(void)
 static void ddr_init(void)
 {
 	if (is_1g())
-		ddrc_regs_val.addrmap6	= 0x0f070707;
+		ddrc_regs_val.addrmap6	= 0x0f060606;
 
 	mx7_dram_cfg(&ddrc_regs_val, &ddrc_mp_val, &ddr_phy_regs_val,
 		     &calib_param);
